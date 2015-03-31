@@ -54,6 +54,6 @@ public class CAccount {
 	
 	public static void main(String args[]) {
 		CAccount c = new CAccount();
-		c.addAccount("test", "test", "test");
+		c.addAccount("test1", "test1", "test1");
 	}
 }
