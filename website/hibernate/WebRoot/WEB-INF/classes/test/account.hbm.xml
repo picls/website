@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+        
+
+<hibernate-mapping package="com.dao">
+	<class name="Account" table="account">
+		<id name="id" type="long" column="id">
+			<generator class="native"/>
+		</id>
+		<property name="name" column="name" />
+		<property name="password" column="password" />
+		<property name="email" column="email" />
+		<property name="qq" type="long" column="qq" />
+		<property name="createTime" type="timestamp" column="create_time"/>
+		<property name="lastLoginTime" type="timestamp" column="last_login_time"/>
+		
+		<many-to-one name="user" column="id" unique="true" not-null="true"/>
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping package="com.dao.s">
+	<class name="SPost" table="s_post">
+		<id name="id" type="long" column="id">
+			<generator class="native" />
+		</id>
+		<!-- <property name="pageId" column="page_id" type="long" /> -->
+		<!-- <property name="creator" column="creator" type="long" /> -->
+		<property name="content" column="content" />
+		<property name="createTime" type="timestamp" column="time" />
+		<property name="source" column="source" />
+
+		<many-to-one name="suser" class="com.dao.s.SUser" fetch="select"
+			cascade="save-update">
+			<column name="creator" not-null="true" />
+		</many-to-one>
+		<many-to-one name="spage" class="com.dao.s.SPage" fetch="select"
+			cascade="save-update">
+			<column name="page_id" not-null="true" />
+		</many-to-one>
+
+	</class>
+</hibernate-mapping>

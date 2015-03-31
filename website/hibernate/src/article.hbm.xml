@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+        
+
+<hibernate-mapping package="com.dao">
+	<class name="Article" table="article">
+		<id name="id" type="long" column="id">
+			<generator class="native"/>
+		</id>
+		<property name="board" column="board" />
+		<property name="title" column="title" />
+		<property name="creator" type="long" column="creator" />
+		<property name="number" type="integer" column="number" />
+		<property name="createTime" type="timestamp" column="create_time"/>
+		<property name="lastChangeTime" type="timestamp" column="last_change_time"/>
+	</class>
+</hibernate-mapping>

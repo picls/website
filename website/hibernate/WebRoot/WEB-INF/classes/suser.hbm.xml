@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+		
+		
+<hibernate-mapping package="com.dao.s">
+	<class name="SUser" table="s_user">
+		<id name="id" type="long" column="id">
+			<generator class="native" />
+		</id>
+		<property name="name" column="name" />
+		<property name="nickname" column="nickname" />
+		<property name="level" column="level" />
+		<property name="article" type="integer" column="article" />
+		<property name="integration" type="integer" column="integrate" />
+		<property name="createTime" type="timestamp" column="create_time" />
+		<property name="lastLoginTime" type="timestamp" column="last_login_time" />
+		
+	</class>
+
+</hibernate-mapping>

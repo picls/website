@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+        
+
+<hibernate-mapping package="test">
+	<class name="Event" table="events">
+		<id name="id" type="integer" column="event_id">
+			<generator class="increment"/>
+		</id>
+		<property name="event_date" type="timestamp" column="event_date"/>
+		<property name="title" column="title" />
+	</class>
+</hibernate-mapping>

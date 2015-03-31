@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://127.0.0.1:3306/web</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">fifa2007</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <!-- Echo SQL better -->
+        <property name="format_sql">true</property>
+        
+        <!-- hibernate collection system -->
+        <property name="generate_statistics">true</property>
+        <!-- comments infomation -->
+        <property name="use_sql_comments"></property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <!--<property name="hbm2ddl.auto">create</property>-->
+        
+        <property name="javax.persistence.validation.mode">none</property>
+
+
+
+        <!--<mapping resource="event.hbm.xml"/>
+        <mapping resource="person.hbm.xml"/>-->
+        
+        <mapping resource="user.hbm.xml"/>
+        <mapping resource="account.hbm.xml"/>
+        <mapping resource="article.hbm.xml"/>
+        
+        <mapping resource="blog.hbm.xml"/>
+        
+        <mapping resource="spost.hbm.xml"/>
+        <mapping resource="spage.hbm.xml"/>
+        <mapping resource="suser.hbm.xml"/>
+
+    </session-factory>
+
+</hibernate-configuration>

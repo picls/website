@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+		<link href="fancyInput.css" rel="stylesheet" type="text/css"/>
+		<link href="perfect-scrollbar.css" rel="sytlesheet" type="text/css"/>
+        <link href="x.css" rel="stylesheet" type="text/css" />
+		<script src="perfect-scrollbar.js"></script>
+        <script src="y.js"></script>
+
+		<style type="text/css">
+			INPUT.smallInput
+			{
+			      BACKGROUND-COLOR:#FFFFFF;
+			      COLOR:#000000;
+			      FONT-SIZE:9pt;
+			      FONT-WEIGHT:Normal;
+			      TEXT-DECORATION:None;
+			      //FOTN-FAMILY:ËÎÌå,verdana,Arial, Helvetica;
+			      TEXT-ALIGN:Left;
+			      BORDER-TOP:3 Hidden #808080;
+			      BORDER-LEFT:3 Hidden #808080;
+			      BORDER-RIGHT:3 Hidden #FFFFFF;
+			      BORDER-BOTTOM:3 Hidden #FFFFFF;
+			      CURSOR:Text;
+			}
+			.input-text
+      {
+            border: 1px solid #C3CED9;
+            -webkit-border-radius:5px;//ÊÊÅäÒÔwebkitÎªºËĞÄµÄä¯ÀÀÆ÷(chrome¡¢safariµÈ)
+						-moz-border-radius:5px;//ÊÊÅäfirefoxä¯ÀÀÆ÷
+						-ms-border-radius:5px;//ÊÊÅäIEä¯ÀÀÆ÷
+						-o-border-radius:5px;//ÊÊÅäoperaä¯ÀÀÆ÷
+						border-radius: 5px 5px 5px 5px;
+            font-size: 14px;
+            height: 31px;
+            line-height: 31px;
+            margin-right: 10px;
+            padding: 0;
+            width: 327px;
+      }
+/*.textarea{
+border:5 double red;font-family:»ªÎÄĞĞ¿¬;color:white;font-size:18px;
+filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, EndColorStr='gold', StartColorStr='green') progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc,Direction=135,strength=15);
+}*/
+			.textx{
+				    border: 1px solid #C3CED9;
+            -webkit-border-radius:7pt;//ÊÊÅäÒÔwebkitÎªºËĞÄµÄä¯ÀÀÆ÷(chrome¡¢safariµÈ)
+						-moz-border-radius:5px;//ÊÊÅäfirefoxä¯ÀÀÆ÷
+						-ms-border-radius:5px;//ÊÊÅäIEä¯ÀÀÆ÷
+						-o-border-radius:5px;//ÊÊÅäoperaä¯ÀÀÆ÷
+						border-radius: 5px 5px 5px 5px;
+						padding:15px;
+						padding-top:5px; /*ÓÒ±ß¿òÁô¿Õ°×*/ 
+						padding-bottom:5px; /*×ó±ß¿òÁô¿Õ°×*/
+						padding-right:7px; /*ÓÒ±ß¿òÁô¿Õ°×*/ 
+						padding-left:7px; /*×ó±ß¿òÁô¿Õ°×*/
+						scrollbar-arrow-color: #f4ae21; /*Í¼6,Èı½Ç¼ıÍ·µÄÑÕÉ«*/
+						scrollbar-base-color: blue;
+			}
+
+		</style>
+		<script>
+			$("#test").perfectScrollbar();
+			$('#Demo').perfectScrollbar();
+		</script>
+	</head>
+	
+	<body>
+		
+		<textarea id="test" class="textx xx"></textarea>
+		<textarea id="test1" class="textx ps-scrollbar-y" rows="5" cols="60" 
+			style="position:relative; overflow:visible; resize:none; outline:none;"></textarea>
+		<p>yyy</p>
+		<br>
+		<input class="input-text" style="width:300px; height:200px;">
+		<input style="background:transparent; border:1px; solid:#ffffff;">
+	</body>
+
+</html>

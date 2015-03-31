@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
+	
+	<title>Register Page</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<meta name="keywords" content="BBS,论坛" />
+	<meta name="description" content="login page,注册页面" />
+	<meta name="author" Content="azx,azx-c@163.com">
+	<meta name="copyright" Content="本页版权归Zerospace所有。All Rights Reserved">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
+	
+	
+	<link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
+	<link rel="stylesheet" href="assets/css/amazeui.min.css" />
+	
+	<style>
+	.header {
+		text-align: center;
+	}
+	
+	.header h1 {
+		font-size: 200%;
+		color: #333;
+		margin-top: 30px;
+	}
+	
+	.header p {
+		font-size: 14px;
+	}
+	</style>
+
+	<script>
+		function verifyPasswordBefore(){
+			var pass = document.getElementById("password").value;
+			var repass = document.getElementById("repassword").value;			
+			if(pass == repass){
+				var rpsv = document.getElementById("warn");
+				rpsv.style.visibility = "hidden";
+				}
+			else{
+				if(repass != null){
+					var rpsv = document.getElementById("warn");
+					rpsv.style.visibility = "visible";
+				}
+				//alert("different.");
+			}
+		}
+		function verifyPassword(){
+			var email = document.getElementById("email").value;
+			var name = document.getElementById("username").value;
+			var pass = document.getElementById("password").value;
+			var repass = document.getElementById("repassword").value;
+			alert("vp");	
+			if((pass=="")||(repass=="")||(email=="")||(name=="")) {
+				alert("null");
+				var b=document.forms[0];
+  				document.forms[0].submit.disabled="disabled";
+			}	
+			else if(pass == repass) {
+				var rpsv = document.getElementById("warn");
+				rpsv.style.visibility = "hidden";
+				}
+			else{
+				if()
+				var rpsv = document.getElementById("warn");
+				rpsv.style.visibility = "visible";
+			}
+				//alert("different.");
+			}
+		}
+	</script>
+</head>
+
+
+
+<body>
+	<div class="header">
+		<div class="am-g">
+			<h1>FULL BBS</h1>
+			<!-- <p>Integrated Development Environment<br/>代码编辑，代码生成，界面设计，调试，编译</p> -->
+		</div>
+		<hr />
+	</div>
+	<div class="am-g">
+		<div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
+			<div style="float:left; width:70px">
+				<h2>注册:</h2>
+			</div>
+			<div class="am-btn-group" style="margin:0 auto;">
+				<a href="#" class="am-btn am-btn-secondary am-btn-sm"><i
+					class="am-icon-github am-icon-sm"></i> Github</a> <a href="#"
+					class="am-btn am-btn-success am-btn-sm"><i
+					class="am-icon-google-plus-square am-icon-sm"></i> Google+</a> <a
+					href="#" class="am-btn am-btn-primary am-btn-sm"><i
+					class="am-icon-stack-overflow am-icon-sm"></i> stackOverflow</a>
+			</div>
+			<br> <br>
+
+			<form method="post" class="am-form" action="sregister" method="POST">
+				<label for="email">邮箱:</label> 
+				<input type="email" name="email" id="email" value="" /> <br> 
+				<label for="email">名称:</label>
+				<input type="text" name="username" id="username" value="" /> <br>
+				<label for="password">密码:</label> 
+				<input type="password" name="password" id="password" value=""
+					onchange="verifyPasswordBefore()" /> <br> 
+				<label for="password">重复密码:</label> 
+				<input type="password" name="repassword" id="repassword" value=""
+					onchange="verifyPasswordBefore()" /> <br>
+
+				<!-- 	      <label for="remember-me">
+	        <input id="remember-me" type="checkbox">
+	        记住密码
+	      </label>
+	      <br /> -->
+
+				<div class="am-cf">
+					<input type="submit" name="login" value=" 注    册 "
+						onclick="verifyPassword()"
+						class="am-btn am-btn-primary am-btn-sm am-fl">
+					&nbsp&nbsp&nbsp <span id="warn" style="visibility:hidden"> <img
+						src="assets/icon/20150104012849327_easyicon_net_16.png"></img>
+						passwords are not the same. </span>
+				</div>
+			</form>
+			<hr>
+			<!--  <p>© 2014 AllMobilize, Inc. Licensed under MIT license.</p> -->
+			<p>FullBBS. Copyright AZX.</p>
+
+		</div>
+	</div>
+</body>
+</html>
